@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,11 +13,11 @@
  */
 public class VentMateria extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form VentMateria
-     */
+ 
     public VentMateria() {
         initComponents();
+        desactivarCampos();
+       
     }
 
     /**
@@ -40,10 +43,13 @@ public class VentMateria extends javax.swing.JInternalFrame {
         setClosable(true);
         setTitle("Formulario de Materias");
 
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("CODIGO DE MATERIA:");
 
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("NOMBRE DE LA MATERIA:");
 
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("AÑO DE CURSADO:");
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -53,10 +59,21 @@ public class VentMateria extends javax.swing.JInternalFrame {
         });
 
         jBguardar.setText("guardar");
+        jBguardar.setEnabled(false);
 
         jBNuevo.setText("Nuevo");
+        jBNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNuevoActionPerformed(evt);
+            }
+        });
 
         jBSalir.setText("Salir");
+        jBSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,6 +129,28 @@ public class VentMateria extends javax.swing.JInternalFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jBNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoActionPerformed
+        // TODO add your handling code here:
+        activarCampos();
+        jBguardar.setEnabled(true);
+    }//GEN-LAST:event_jBNuevoActionPerformed
+
+    private void jBSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirActionPerformed
+        // TODO add your handling code here:
+         System.exit(0);
+    }//GEN-LAST:event_jBSalirActionPerformed
+private void activarCampos(){
+    jTextField1.setEditable(true);
+    jTextField2.setEditable(true);
+    jTextField3.setEditable(true);
+}
+
+private void desactivarCampos(){
+    jTextField1.setEditable(false);
+    jTextField2.setEditable(false);
+    jTextField3.setEditable(false);
+}
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

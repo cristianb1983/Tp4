@@ -39,8 +39,10 @@ public class VentFormulario extends javax.swing.JInternalFrame {
         setClosable(true);
         setTitle("Formulario de Inscripcion");
 
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("ELIJA UNA MATERIA:");
 
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("ELIJA UN ALUMNO:");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));

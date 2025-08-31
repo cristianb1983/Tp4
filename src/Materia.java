@@ -1,12 +1,14 @@
+
 /**
-*
-* @autor Benegas Gonzalez Cristian Rene
-*/
+ *
+ * @autor Benegas Gonzalez Cristian Rene
+ */
 
 public class Materia {
-private int idMateria;
-private String nombre;
-private int anio;
+
+    private int idMateria;
+    private String nombre;
+    private int anio;
 
     public Materia(int idMateria, String nombre, int anio) {
         this.idMateria = idMateria;
@@ -37,6 +39,5 @@ private int anio;
     public void setAnio(int anio) {
         this.anio = anio;
     }
-
 
 }

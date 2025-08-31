@@ -1,17 +1,22 @@
-/**
-*
-* @autor Benegas Gonzalez Cristian Rene
-*/
 
+import java.util.HashSet;
+
+/**
+ *
+ * @autor Benegas Gonzalez Cristian Rene
+ */
 public class Alumno {
-private int legajo;
-private String apellido;
-private String nombre;
+
+    private int legajo;
+    private String apellido;
+    private String nombre;
+    
 
     public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
+        
     }
 
     public int getLegajo() {
@@ -38,10 +43,6 @@ private String nombre;
         this.nombre = nombre;
     }
 
-public void agregarMateria(Materia m){
-    
-}
-public int cantidadMaterias(){
-   
-}
-}
+  
+    }
+

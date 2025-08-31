@@ -1,3 +1,6 @@
+
+import java.util.HashSet;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +12,10 @@
  * @author crb_p
  */
 public class Inscripcion extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Alumnos
-     */
+  
     public Inscripcion() {
         initComponents();
+
     }
 
     /**
@@ -55,6 +56,7 @@ public class Inscripcion extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("PORTAL DE INSCRIPCIONES");
 
         Escritorio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -62,18 +64,27 @@ public class Inscripcion extends javax.swing.JFrame {
         Escritorio.setLayout(EscritorioLayout);
         EscritorioLayout.setHorizontalGroup(
             EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 896, Short.MAX_VALUE)
+            .addGap(0, 1077, Short.MAX_VALUE)
         );
         EscritorioLayout.setVerticalGroup(
             EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 683, Short.MAX_VALUE)
+            .addGap(0, 757, Short.MAX_VALUE)
         );
 
         jMenuBar2.setBackground(new java.awt.Color(204, 204, 204));
-        jMenuBar2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jMenuBar2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuBar2.setForeground(new java.awt.Color(153, 153, 153));
+        jMenuBar2.setAlignmentX(5.0F);
+        jMenuBar2.setAlignmentY(5.0F);
+        jMenuBar2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jMenuBar2.setMargin(new java.awt.Insets(0, 0, 2, 0));
 
+        jMenu1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu1.setText("Alumno");
+        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jMenu1.setHideActionText(true);
+        jMenu1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jMenu1.setIconTextGap(20);
 
         jMingresarAlumno.setText("Agregar Alumno");
         jMingresarAlumno.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +96,9 @@ public class Inscripcion extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu1);
 
+        jMenu2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu2.setText("Materia");
+        jMenu2.setIconTextGap(20);
 
         jmiMateria.setText("Cargar Materia");
         jmiMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +110,9 @@ public class Inscripcion extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu2);
 
+        jMenu4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu4.setText("Inscripcion");
+        jMenu4.setIconTextGap(20);
 
         jmiInscripcion.setText("Formulario de inscripcion");
         jmiInscripcion.addActionListener(new java.awt.event.ActionListener() {
@@ -109,9 +124,17 @@ public class Inscripcion extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu4);
 
+        jmiRegistro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jmiRegistro.setText("Registro");
+        jmiRegistro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jmiRegistro.setIconTextGap(20);
 
         jMenuItem2.setText("Ver Registro");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jmiRegistro.add(jMenuItem2);
 
         jMenuBar2.add(jmiRegistro);
@@ -134,7 +157,7 @@ public class Inscripcion extends javax.swing.JFrame {
 
     private void jMingresarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMingresarAlumnoActionPerformed
         // TODO add your handling code here:
-        VentAlum v1= new VentAlum();
+        VentAlum v1 = new VentAlum();
         Escritorio.add(v1);
         v1.setVisible(true);
     }//GEN-LAST:event_jMingresarAlumnoActionPerformed
@@ -149,10 +172,19 @@ public class Inscripcion extends javax.swing.JFrame {
     private void jmiInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiInscripcionActionPerformed
         // TODO add your handling code here:
         VentFormulario v3 = new VentFormulario();
-          Escritorio.add(v3);
+        Escritorio.add(v3);
         v3.setVisible(true);
     }//GEN-LAST:event_jmiInscripcionActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        VentanaRegistro v4 = new VentanaRegistro();
+        Escritorio.add(v4);
+        v4.setVisible(true);
+
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+   
     /**
      * @param args the command line arguments
      */
