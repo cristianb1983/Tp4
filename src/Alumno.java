@@ -20,10 +20,10 @@ public class Alumno {
     }
 
     public boolean agregarMateria(Materia materia) {
-        return materias.add(materia); // solo si agrega una materia devuelve true, caso contrario false (materia ya está en la lista)
+        return materias.add(materia); // solo si agrega una materia devuelve true, caso contrario false (la materia ya está en la lista)
     }
 
-    public int cantidadMateria() {
+    public int cantidadMaterias() {
         return materias.size(); // que devuelve la cantidad de materias a las que está inscripto el alumno.
     }
 
