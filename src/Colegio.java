@@ -6,13 +6,16 @@ import java.util.HashSet;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author crb_p
  */
 public class Colegio extends javax.swing.JFrame {
-  
+
+    public static HashSet<Alumno> listaAlumnos = new HashSet<>();
+
+    public static HashSet<Materia> listaMaterias = new HashSet<>();
+
     public Colegio() {
         initComponents();
 
@@ -184,7 +187,6 @@ public class Colegio extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-   
     /**
      * @param args the command line arguments
      */
@@ -194,6 +196,32 @@ public class Colegio extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        Materia materia1 = new Materia(1, "Web 2", 2);
+        Materia materia2 = new Materia(2, "Matemáticas", 1);
+        Materia materia3 = new Materia(3, "Laboratorio 1", 1);
+
+        listaMaterias.add(materia1);
+        listaMaterias.add(materia2);
+        listaMaterias.add(materia3);
+
+        Alumno alumno1 = new Alumno(1001, "Lopez", "Martin");
+        Alumno alumno2 = new Alumno(1002, "Martínez", "Brenda");
+
+        listaAlumnos.add(alumno1);
+        listaAlumnos.add(alumno2);
+
+        alumno1.agregarMateria(materia1);
+        alumno1.agregarMateria(materia2);
+        alumno1.agregarMateria(materia3);
+
+        alumno2.agregarMateria(materia1);
+        alumno2.agregarMateria(materia2);
+        alumno2.agregarMateria(materia3);
+        alumno2.agregarMateria(materia3);
+
+        System.out.println(alumno1 + " está inscripto en " + alumno1.cantidadMaterias() + " materias");
+        System.out.println(alumno2 + " está inscripto en " + alumno2.cantidadMaterias() + " materias");
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

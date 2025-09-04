@@ -10,21 +10,21 @@ public class Alumno {
     private int legajo;
     private String apellido;
     private String nombre;
-    private HashSet<Materia> materias;
+    private HashSet<Materia> materiasInscriptas;
 
     public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
-        this.materias = new HashSet<>();
+        this.materiasInscriptas = new HashSet<>();
     }
 
     public boolean agregarMateria(Materia materia) {
-        return materias.add(materia); // solo si agrega una materia devuelve true, caso contrario false (la materia ya está en la lista)
+        return materiasInscriptas.add(materia); // solo si agrega una materia devuelve true, caso contrario false (la materia ya está en la lista)
     }
 
     public int cantidadMaterias() {
-        return materias.size(); // que devuelve la cantidad de materias a las que está inscripto el alumno.
+        return materiasInscriptas.size(); // que devuelve la cantidad de materiasInscriptas a las que está inscripto el alumno.
     }
 
     public int getLegajo() {
@@ -51,10 +51,35 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public HashSet<Materia> getMaterias() {
-        return materias;
+    public HashSet<Materia> getMateriasInscriptas() {
+        return materiasInscriptas;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 31 * hash + this.legajo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Alumno other = (Alumno) obj;
+        if (this.legajo != other.legajo) {
+            return false;
+        }
+        return true;
+    }
+        
     @Override
     public String toString() {
         return apellido + ", " + nombre + " [Legajo: " + legajo + "]";
