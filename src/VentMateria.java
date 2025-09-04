@@ -6,18 +6,16 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author crb_p
  */
 public class VentMateria extends javax.swing.JInternalFrame {
 
- 
     public VentMateria() {
         initComponents();
         desactivarCampos();
-       
+
     }
 
     /**
@@ -29,139 +27,212 @@ public class VentMateria extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jBguardar = new javax.swing.JButton();
-        jBNuevo = new javax.swing.JButton();
-        jBSalir = new javax.swing.JButton();
+        jpnVentMateria = new javax.swing.JPanel();
+        jlbCodMateria = new javax.swing.JLabel();
+        txtCodMateria = new javax.swing.JTextField();
+        jlbNombreMateria = new javax.swing.JLabel();
+        txtNombreMateria = new javax.swing.JTextField();
+        jlbAnioMateria = new javax.swing.JLabel();
+        txtAnioMateria = new javax.swing.JTextField();
+        jbtGuardar = new javax.swing.JButton();
+        jbtNuevo = new javax.swing.JButton();
+        jbtSalir = new javax.swing.JButton();
+        jblFormMaterias = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setClosable(true);
-        setTitle("Formulario de Materias");
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("CODIGO DE MATERIA:");
+        jpnVentMateria.setBackground(java.awt.Color.lightGray);
 
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("NOMBRE DE LA MATERIA:");
+        jlbCodMateria.setForeground(new java.awt.Color(0, 102, 255));
+        jlbCodMateria.setText("CÓDIGO DE MATERIA:");
 
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("AÑO DE CURSADO:");
+        txtCodMateria.setBackground(java.awt.Color.white);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jlbNombreMateria.setForeground(new java.awt.Color(0, 102, 255));
+        jlbNombreMateria.setText("NOMBRE DE LA MATERIA:");
+
+        txtNombreMateria.setBackground(java.awt.Color.white);
+        txtNombreMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtNombreMateriaActionPerformed(evt);
             }
         });
 
-        jBguardar.setText("guardar");
-        jBguardar.setEnabled(false);
+        jlbAnioMateria.setForeground(new java.awt.Color(0, 102, 255));
+        jlbAnioMateria.setText("AÑO AL QUE PERTENECE:");
 
-        jBNuevo.setText("Nuevo");
-        jBNuevo.addActionListener(new java.awt.event.ActionListener() {
+        txtAnioMateria.setBackground(java.awt.Color.white);
+
+        jbtGuardar.setBackground(java.awt.Color.lightGray);
+        jbtGuardar.setForeground(new java.awt.Color(0, 102, 255));
+        jbtGuardar.setText("Guardar");
+        jbtGuardar.setEnabled(false);
+        jbtGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevoActionPerformed(evt);
+                jbtGuardarActionPerformed(evt);
             }
         });
 
-        jBSalir.setText("Salir");
-        jBSalir.addActionListener(new java.awt.event.ActionListener() {
+        jbtNuevo.setBackground(java.awt.Color.lightGray);
+        jbtNuevo.setForeground(new java.awt.Color(0, 102, 255));
+        jbtNuevo.setText("Nuevo");
+        jbtNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBSalirActionPerformed(evt);
+                jbtNuevoActionPerformed(evt);
             }
         });
+
+        jbtSalir.setBackground(java.awt.Color.lightGray);
+        jbtSalir.setForeground(new java.awt.Color(0, 102, 255));
+        jbtSalir.setText("Salir");
+        jbtSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtSalirActionPerformed(evt);
+            }
+        });
+
+        jblFormMaterias.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jblFormMaterias.setForeground(new java.awt.Color(0, 102, 255));
+        jblFormMaterias.setText("Formulario de Materias");
+
+        javax.swing.GroupLayout jpnVentMateriaLayout = new javax.swing.GroupLayout(jpnVentMateria);
+        jpnVentMateria.setLayout(jpnVentMateriaLayout);
+        jpnVentMateriaLayout.setHorizontalGroup(
+            jpnVentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnVentMateriaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jblFormMaterias)
+                .addGap(147, 147, 147))
+            .addGroup(jpnVentMateriaLayout.createSequentialGroup()
+                .addGroup(jpnVentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnVentMateriaLayout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addComponent(jbtGuardar)
+                        .addGap(27, 27, 27)
+                        .addComponent(jbtNuevo)
+                        .addGap(29, 29, 29)
+                        .addComponent(jbtSalir))
+                    .addGroup(jpnVentMateriaLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(jpnVentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbNombreMateria)
+                            .addComponent(jlbCodMateria)
+                            .addComponent(jlbAnioMateria))
+                        .addGap(17, 17, 17)
+                        .addGroup(jpnVentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtCodMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNombreMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAnioMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        jpnVentMateriaLayout.setVerticalGroup(
+            jpnVentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnVentMateriaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jblFormMaterias)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(jpnVentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbCodMateria)
+                    .addComponent(txtCodMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jpnVentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbNombreMateria)
+                    .addComponent(txtNombreMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jpnVentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbAnioMateria)
+                    .addComponent(txtAnioMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(72, 72, 72)
+                .addGroup(jpnVentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtSalir)
+                    .addComponent(jbtNuevo)
+                    .addComponent(jbtGuardar))
+                .addGap(37, 37, 37))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jBguardar)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jBNuevo)
-                        .addGap(66, 66, 66)
-                        .addComponent(jBSalir)))
-                .addContainerGap(145, Short.MAX_VALUE))
+            .addComponent(jpnVentMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(92, 92, 92)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBguardar)
-                    .addComponent(jBNuevo)
-                    .addComponent(jBSalir))
-                .addContainerGap(81, Short.MAX_VALUE))
+            .addComponent(jpnVentMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtNombreMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreMateriaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtNombreMateriaActionPerformed
 
-    private void jBNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoActionPerformed
+    private void jbtNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtNuevoActionPerformed
         // TODO add your handling code here:
         activarCampos();
-        jBguardar.setEnabled(true);
-    }//GEN-LAST:event_jBNuevoActionPerformed
+        jbtGuardar.setEnabled(true);
+        txtCodMateria.setText("");
+        txtNombreMateria.setText("");
+        txtAnioMateria.setText("");
+        txtCodMateria.requestFocus();
+    }//GEN-LAST:event_jbtNuevoActionPerformed
 
-    private void jBSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirActionPerformed
-        // TODO add your handling code here:
-         System.exit(0);
-    }//GEN-LAST:event_jBSalirActionPerformed
-private void activarCampos(){
-    jTextField1.setEditable(true);
-    jTextField2.setEditable(true);
-    jTextField3.setEditable(true);
-}
+    private void jbtSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtSalirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jbtSalirActionPerformed
 
-private void desactivarCampos(){
-    jTextField1.setEditable(false);
-    jTextField2.setEditable(false);
-    jTextField3.setEditable(false);
-}
+    private void jbtGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtGuardarActionPerformed
+        try {
+            if (txtNombreMateria.getText().trim().isEmpty() || txtNombreMateria.getText().trim().isEmpty() || txtAnioMateria.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Debe completar los datos de todos los campos...");
+                return;
+            }
+
+            int idMateria = Integer.parseInt(txtCodMateria.getText().trim());
+            String nombre = txtNombreMateria.getText().trim();
+            int anio = Integer.parseInt(txtAnioMateria.getText().trim());
+
+            if (idMateria <= 0 || anio <= 0) {
+                JOptionPane.showMessageDialog(this, "El código de la materia y el año deben ser mayores a cero");
+                return;
+            }
+
+            Materia materia = new Materia(idMateria, nombre, anio);
+            if (Colegio.listaMaterias.add(materia)) {
+                JOptionPane.showInternalMessageDialog(this, "La carga de la materia fue exitosa...");
+            } else {
+                JOptionPane.showMessageDialog(this, "La carga no pudo completarse, el código ya existe");
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Error!!! Debe ingresar números enteros en el campo código y año");
+        }
+    }//GEN-LAST:event_jbtGuardarActionPerformed
+    private void activarCampos() {
+        txtCodMateria.setEditable(true);
+        txtNombreMateria.setEditable(true);
+        txtAnioMateria.setEditable(true);
+    }
+
+    private void desactivarCampos() {
+        txtCodMateria.setEditable(false);
+        txtNombreMateria.setEditable(false);
+        txtAnioMateria.setEditable(false);
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBNuevo;
-    private javax.swing.JButton jBSalir;
-    private javax.swing.JButton jBguardar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel jblFormMaterias;
+    private javax.swing.JButton jbtGuardar;
+    private javax.swing.JButton jbtNuevo;
+    private javax.swing.JButton jbtSalir;
+    private javax.swing.JLabel jlbAnioMateria;
+    private javax.swing.JLabel jlbCodMateria;
+    private javax.swing.JLabel jlbNombreMateria;
+    private javax.swing.JPanel jpnVentMateria;
+    private javax.swing.JTextField txtAnioMateria;
+    private javax.swing.JTextField txtCodMateria;
+    private javax.swing.JTextField txtNombreMateria;
     // End of variables declaration//GEN-END:variables
 }
