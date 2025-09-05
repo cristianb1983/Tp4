@@ -1,5 +1,6 @@
 
 import java.util.HashSet;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -163,6 +164,7 @@ public class Colegio extends javax.swing.JFrame {
         VentAlum v1 = new VentAlum();
         Escritorio.add(v1);
         v1.setVisible(true);
+        JOptionPane.showMessageDialog(this, "Da click en el botón [Nuevo] para comenzar a cargar los datos");
     }//GEN-LAST:event_jMingresarAlumnoActionPerformed
 
     private void jmiMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiMateriaActionPerformed
