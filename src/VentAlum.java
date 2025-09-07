@@ -55,6 +55,7 @@ public class VentAlum extends javax.swing.JInternalFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        setBackground(java.awt.Color.lightGray);
         setClosable(true);
         setIconifiable(true);
         setTitle("Formulario de Alumnos");
@@ -180,6 +181,10 @@ public class VentAlum extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         activarCampos();
         jBguardar.setEnabled(true);
+        txtLegajo.setText("");
+        txtApellido.setText("");
+        txtNombre.setText("");
+        txtLegajo.requestFocus();
     }//GEN-LAST:event_jBnuevoActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
