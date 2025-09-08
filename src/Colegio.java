@@ -43,6 +43,7 @@ public class Colegio extends javax.swing.JFrame {
         jmiInscripcion = new javax.swing.JMenuItem();
         jmiRegistro = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMnSalir = new javax.swing.JMenu();
 
         jToolBar2.setRollover(true);
 
@@ -143,6 +144,14 @@ public class Colegio extends javax.swing.JFrame {
 
         jMenuBar2.add(jmiRegistro);
 
+        jMnSalir.setText("Salir");
+        jMnSalir.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jMnSalirItemStateChanged(evt);
+            }
+        });
+        jMenuBar2.add(jMnSalir);
+
         setJMenuBar(jMenuBar2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -188,6 +197,11 @@ public class Colegio extends javax.swing.JFrame {
         v4.setVisible(true);
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMnSalirItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jMnSalirItemStateChanged
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jMnSalirItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -262,6 +276,7 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMingresarAlumno;
+    private javax.swing.JMenu jMnSalir;
     private javax.swing.JToolBar jToolBar2;
     private javax.swing.JMenuItem jmiInscripcion;
     private javax.swing.JMenuItem jmiMateria;
