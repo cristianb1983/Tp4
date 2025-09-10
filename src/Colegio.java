@@ -41,9 +41,8 @@ public class Colegio extends javax.swing.JFrame {
         jmiMateria = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jmiInscripcion = new javax.swing.JMenuItem();
-        jmiRegistro = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMnSalir = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         jToolBar2.setRollover(true);
 
@@ -129,27 +128,21 @@ public class Colegio extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu4);
 
-        jmiRegistro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jmiRegistro.setText("Registro");
-        jmiRegistro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jmiRegistro.setIconTextGap(20);
-
-        jMenuItem2.setText("Ver Registro");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jmiRegistro.add(jMenuItem2);
-
-        jMenuBar2.add(jmiRegistro);
-
         jMnSalir.setText("Salir");
-        jMnSalir.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jMnSalirItemStateChanged(evt);
+        jMnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnSalirActionPerformed(evt);
             }
         });
+
+        jMenuItem1.setText("Salir");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMnSalir.add(jMenuItem1);
+
         jMenuBar2.add(jMnSalir);
 
         setJMenuBar(jMenuBar2);
@@ -190,18 +183,15 @@ public class Colegio extends javax.swing.JFrame {
         v3.setVisible(true);
     }//GEN-LAST:event_jmiInscripcionActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        VentanaRegistro v4 = new VentanaRegistro();
-        Escritorio.add(v4);
-        v4.setVisible(true);
+    private void jMnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnSalirActionPerformed
+    }//GEN-LAST:event_jMnSalirActionPerformed
 
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jMnSalirItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jMnSalirItemStateChanged
-        // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_jMnSalirItemStateChanged
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        int opcion = JOptionPane.showConfirmDialog(this, "Desea salir de la aplicación?", "Confirmar salida", JOptionPane.YES_NO_OPTION);
+        if (opcion == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,7 +227,7 @@ public class Colegio extends javax.swing.JFrame {
 
         System.out.println(alumno1 + " está inscripto en " + alumno1.cantidadMaterias() + " materias");
         System.out.println(alumno2 + " está inscripto en " + alumno2.cantidadMaterias() + " materias");
-        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -274,12 +264,11 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMingresarAlumno;
     private javax.swing.JMenu jMnSalir;
     private javax.swing.JToolBar jToolBar2;
     private javax.swing.JMenuItem jmiInscripcion;
     private javax.swing.JMenuItem jmiMateria;
-    private javax.swing.JMenu jmiRegistro;
     // End of variables declaration//GEN-END:variables
 }
